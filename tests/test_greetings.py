@@ -1,0 +1,5 @@
+from mystics_and_manuscripts_core.internal.greetings import say_hello
+
+
+def test_say_hello():
+    assert say_hello() == "Hello World!"
