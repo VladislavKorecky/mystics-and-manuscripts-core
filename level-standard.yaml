@@ -1,0 +1,16 @@
+# List of all places in your level.
+# list[object]
+places:
+    # Unique number identifier for each place. Convention: kebab case
+    # str
+  - id: some-room-you-made
+
+# Paths between your places.
+# list[object]
+paths:
+    # ID of a place where the path begins.
+    # str
+  - from: some-room-id
+    # ID of a place to which the path leads.
+    # str
+    to: different-room-id
