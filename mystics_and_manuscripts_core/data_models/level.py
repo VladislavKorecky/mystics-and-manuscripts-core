@@ -8,8 +8,12 @@ from mystics_and_manuscripts_core.data_models.place import Place
 
 @dataclass
 class Level:
-    places: list[Place] = field(metadata=dict(required=True))
-    paths: list[Path] = field(metadata=dict(required=True))
+    places: list[Place]
+    paths: list[Path]
+
+    name: str = field(default="Unnamed level")
+    description: str | None = field(default=None)
+    introduction: str | None = field(default=None)
 
 
 level_schema = class_schema(Level)()
