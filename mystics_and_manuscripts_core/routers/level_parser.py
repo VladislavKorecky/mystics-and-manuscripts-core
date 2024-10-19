@@ -18,7 +18,7 @@ class LevelYAMLBody(BaseModel):
 
 
 @level_parser_router.post("/level-dict-to-validated-yaml")
-def level_dict_to_validated_yaml_route(body: LevelDictBody):
+def level_dict_to_validated_yaml_route(body: LevelDictBody) -> dict:
     try:
         result = level_dict_to_validated_yaml(body.level_dict)
     except ValidationError:
@@ -28,7 +28,7 @@ def level_dict_to_validated_yaml_route(body: LevelDictBody):
 
 
 @level_parser_router.post("/level-yaml-to-validated-dict")
-def level_yaml_to_validated_dict_route(body: LevelYAMLBody):
+def level_yaml_to_validated_dict_route(body: LevelYAMLBody) -> dict:
     try:
         result = level_yaml_to_validated_dict(body.level_yaml)
     except YAMLError:
@@ -40,7 +40,7 @@ def level_yaml_to_validated_dict_route(body: LevelYAMLBody):
 
 
 @level_parser_router.post("/validate-level-dict")
-def validate_level_dict_route(body: LevelDictBody):
+def validate_level_dict_route(body: LevelDictBody) -> dict:
     try:
         result = validate_level_dict(body.level_dict)
     except ValidationError:
@@ -50,7 +50,7 @@ def validate_level_dict_route(body: LevelDictBody):
 
 
 @level_parser_router.post("/validate-level-yaml")
-def validate_level_yaml_route(body: LevelYAMLBody):
+def validate_level_yaml_route(body: LevelYAMLBody) -> dict:
     try:
         result = validate_level_yaml(body.level_yaml)
     except YAMLError:
