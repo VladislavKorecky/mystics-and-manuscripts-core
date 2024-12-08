@@ -8,7 +8,7 @@ class Place:
     id: str
 
     name: str = field(default="Unknown place")
-    description: str | None = field(default=None)
+    description: str = field(default="")
 
 
 place_schema = class_schema(Place)()

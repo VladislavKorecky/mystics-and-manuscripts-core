@@ -9,7 +9,7 @@ class Path:
     to_id: str = field(metadata=dict(data_key="to"))
 
     name: str = field(default="Unnamed path")
-    description: str = field(default="You walk along a path.")
+    description: str = field(default="")
 
 
 path_schema = class_schema(Path)()
